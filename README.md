@@ -36,7 +36,7 @@ Install source with java-doc.
 
 ## Fetch project source
 
-### Without git
+### Without git on Linux
 
 ```sh
 curl -g https://codeload.github.com/Dashstrom/tp-antlr/zip/refs/heads/master --output tp-antlr.zip
