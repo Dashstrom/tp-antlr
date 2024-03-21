@@ -2,9 +2,11 @@
 
 TP AntLR for AI21.
 
+Be careful: **1 clone 📦 = 1 star ✨**
+
 ## Windows prerequisite
 
-### Install chocolatey for install Java
+### Install chocolatey (package manager)
 
 Open an admin shell with `windows + R -> "powershell" -> ctrl + shift + enter` then enter:
 
@@ -20,11 +22,26 @@ choco install openjdk
 
 ## Mac prerequisite
 
-Install java +11.
+### Install Homebrew (package manager)
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.bash_profile && source ~/.bash_profile
+```
+
+### Install Java and Gtk
+
+```bash
+brew install java
+```
 
 ## Linux prerequisite
 
-Install java +11.
+### Install Update and install Java
+
+```sh
+sudo apt -y update && sudo apt -y install default-jdk
+```
 
 ## Fetch project source
 
@@ -65,7 +82,14 @@ chmod +x mvnw
 ## Run program
 
 ```sh
-java -jar target/ai21-antlr-1.0-SNAPSHOT-jar-with-dependencies.jar
+java -jar target/ai21-antlr-1.0-jar-with-dependencies.jar
+```
+
+The following warning can occur, and you can ignore it [see stackoverflow issue](https://stackoverflow.com/questions/67854139/javafx-warning-unsupported-javafx-configuration-classes-were-loaded-from-unna).
+
+```text
+... com.sun.javafx.application.PlatformImpl startup
+AVERTISSEMENT: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @...'
 ```
 
 ![GUI](sujets/gui.png)

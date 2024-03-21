@@ -13,6 +13,7 @@
         "mvnw",
         "ojdkbuild",
         "setx",
+        "stackoverflow",
         "takari",
         "winget"
     ],
