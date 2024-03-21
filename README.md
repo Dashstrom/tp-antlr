@@ -29,16 +29,18 @@ sudo apt -y update && sudo apt -y install default-jdk
 
 ## Get project
 
-### With git
+<details>
+  <summary>With git</summary>
+  ```sh
+  git clone https://github.com/Dashstrom/tp-antlr.git
+  cd tp-antlr
+  ```
+</details>
 
-```sh
-git clone https://github.com/Dashstrom/tp-antlr.git
-cd tp-antlr
-```
-
-### Without git
-
-[Download the ZIP](https://github.com/Dashstrom/tp-antlr/archive/refs/heads/main.zip)
+<details>
+    <summary>Without git</summary>
+    [Download the ZIP](https://github.com/Dashstrom/tp-antlr/archive/refs/heads/main.zip)
+</details>
 
 ## Retrieve sources for java-docs
 
