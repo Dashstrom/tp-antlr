@@ -9,7 +9,7 @@ Be careful: **1 clone 📦 = 1 star ✨**
 <details>
   <summary>With git</summary>
 
-```sh
+```bash
 git clone https://github.com/Dashstrom/tp-antlr.git
 cd tp-antlr
 ```
@@ -39,7 +39,7 @@ choco install openjdk
 
 ### Windows: Retrieve sources for java-docs
 
-```sh
+```powershell
 ./mvnw.cmd dependency:sources
 ```
 
@@ -62,31 +62,31 @@ choco install openjdk
 
 ## Ubuntu: Make Maven Wrapper executable
 
-```sh
+```bash
 chmod +x mvnw
 ```
 
 ### Ubuntu: Update and Install Java
 
-```sh
+```bash
 sudo apt -y update && sudo apt -y install default-jdk
 ```
 
 ### Ubuntu: Retrieve sources for java-docs
 
-```sh
+```bash
 ./mvnw dependency:sources
 ```
 
 ### Ubuntu: Compile and run
 
-```sh
+```bash
 ./mvnw clean compile exec:java
 ```
 
 ### Ubuntu: Build standalone JAR
 
-```sh
+```bash
 ./mvnw clean package
 ```
 
@@ -97,7 +97,7 @@ sudo apt -y update && sudo apt -y install default-jdk
 
 ### Mac: Make Maven Wrapper executable
 
-```sh
+```bash
 chmod +x mvnw
 ```
 
@@ -111,19 +111,19 @@ brew install java
 
 ### Mac: Retrieve sources for java-docs
 
-```sh
+```bash
 ./mvnw dependency:sources
 ```
 
 ### Mac: Compile and run
 
-```sh
+```bash
 ./mvnw clean compile exec:java
 ```
 
 ### Mac: Build standalone JAR
 
-```sh
+```bash
 ./mvnw clean package
 ```
 
@@ -131,7 +131,7 @@ brew install java
 
 ## Run standalone JAR
 
-```sh
+```bash
 java -jar target/ai21-antlr-1.0-jar-with-dependencies.jar
 ```
 
@@ -148,6 +148,6 @@ AVERTISSEMENT: Unsupported JavaFX configuration: classes were loaded from 'unnam
 
 Regenerate [Maven wrapper](https://maven.apache.org/wrapper/maven-wrapper-plugin/) (only if you know what you are doing).
 
-```sh
+```bash
 mvn -N io.takari:maven:wrapper
 ```
