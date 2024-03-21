@@ -4,7 +4,7 @@ Basic project to carry out UV AI21 practical of [UTC](https://www.utc.fr/) work 
 
 Be careful: **1 clone 📦 = 1 star ✨**
 
-## Get project
+## Download project
 
 <details>
   <summary>With git</summary>
