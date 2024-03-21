@@ -32,16 +32,16 @@ Install [Tiled](https://www.mapeditor.org/) for edit zones
 ### Without git
 
 ```sh
-curl -g https://codeload.github.com/Dashstrom/The-Legend-of-Link/zip/refs/heads/master --output The-Legend-of-Link.zip
-tar xf The-Legend-of-Link-archive.zip
-cd The-Legend-of-Link-master
+curl -g https://codeload.github.com/Dashstrom/tp-antlr/zip/refs/heads/master --output tp-antlr.zip
+tar xf tp-antlr-archive.zip
+cd tp-antlr-main
 ```
 
 ### With git
 
 ```sh
-git clone https://github.com/Dashstrom/The-Legend-of-Link.git
-cd The-Legend-of-Link
+git clone https://github.com/Dashstrom/tp-antlr.git
+cd tp-antlr
 ```
 
 ## Build standalone jar
