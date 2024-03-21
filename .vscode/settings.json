@@ -23,4 +23,7 @@
         "target/": true
     },
     "redhat.telemetry.enabled": false,
+    "markdownlint.config": {
+        "MD033": false
+    }
 }

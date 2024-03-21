@@ -4,46 +4,6 @@ Basic project to carry out UV AI21 practical of [UTC](https://www.utc.fr/) work 
 
 Be careful: **1 clone 📦 = 1 star ✨**
 
-## Install Java
-
-<details>
-  <summary>Windows</summary>
-
-### Install chocolatey and Java
-
-Open an admin shell with `windows + R -> "powershell" -> ctrl + shift + enter` then enter:
-
-```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-choco install openjdk
-```
-
-</details>
-
-<details>
-  <summary>Ubuntu</summary>
-
-### Update and Install Java
-
-```sh
-sudo apt -y update && sudo apt -y install default-jdk
-```
-
-</details>
-
-<details>
-  <summary>Mac</summary>
-
-### Install Homebrew and Java
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.bash_profile && source ~/.bash_profile
-brew install java
-```
-
-</details>
-
 ## Get project
 
 <details>
@@ -63,36 +23,33 @@ cd tp-antlr
 
 </details>
 
-## Make mvnw executable on Ubuntu and Mac
-
-```sh
-chmod +x mvnw
-```
-
-## Retrieve sources for java-docs
+## Tutorials
 
 <details>
   <summary>Windows</summary>
+
+### Windows : Install chocolatey and Java
+
+Open an admin shell with `windows + R -> "powershell" -> ctrl + shift + enter` then enter:
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+choco install openjdk
+```
+
+### Windows : Retrieve sources for java-docs
 
 ```sh
 ./mvnw.cmd dependency:sources
 ```
 
-</details>
+### Windows : Compile and run
 
-<details>
-  <summary>Ubuntu and Mac</summary>
-
-```sh
-./mvnw dependency:sources
+```powershell
+./mvnw.cmd clean compile exec:java
 ```
 
-</details>
-
-## Build standalone JAR
-
-<details>
-  <summary>Windows</summary>
+### Windows : Build standalone JAR
 
 ```powershell
 ./mvnw.cmd clean package
@@ -101,7 +58,70 @@ chmod +x mvnw
 </details>
 
 <details>
-  <summary>Ubuntu and Mac</summary>
+  <summary>Ubuntu</summary>
+
+## Ubuntu : Make Maven Wrapper executable
+
+```sh
+chmod +x mvnw
+```
+
+### Ubuntu : Update and Install Java
+
+```sh
+sudo apt -y update && sudo apt -y install default-jdk
+```
+
+### Ubuntu : Retrieve sources for java-docs
+
+```sh
+./mvnw dependency:sources
+```
+
+### Ubuntu : Compile and run
+
+```sh
+./mvnw clean compile exec:java
+```
+
+### Ubuntu : Build standalone JAR
+
+```sh
+./mvnw clean package
+```
+
+</details>
+
+<details>
+  <summary>Mac</summary>
+
+## Mac : Make Maven Wrapper executable
+
+```sh
+chmod +x mvnw
+```
+
+### Mac Install Homebrew and Java
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.bash_profile && source ~/.bash_profile
+brew install java
+```
+
+### Mac : Retrieve sources for java-docs
+
+```sh
+./mvnw dependency:sources
+```
+
+### Mac : Compile and run
+
+```sh
+./mvnw clean compile exec:java
+```
+
+### Mac : Build standalone JAR
 
 ```sh
 ./mvnw clean package
@@ -124,29 +144,9 @@ AVERTISSEMENT: Unsupported JavaFX configuration: classes were loaded from 'unnam
 
 ![GUI](sujets/gui.png)
 
-## Compile and run faster
-
-<details>
-  <summary>Windows</summary>
-
-```powershell
-./mvnw.cmd clean compile exec:java
-```
-
-</details>
-
-<details>
-  <summary>Ubuntu and Mac</summary>
-
-```sh
-./mvnw clean compile exec:java
-```
-
-</details>
-
 ## Development
 
-Remake Maven wrapper (only if you know what you are doing).
+Regenerate [Maven wrapper](https://maven.apache.org/wrapper/maven-wrapper-plugin/) (only if you know what you are doing).
 
 ```sh
 mvn -N io.takari:maven:wrapper
