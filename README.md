@@ -4,7 +4,9 @@ TP AntLR for AI21.
 
 ## Windows prerequisite
 
-Open an admin shell with  `windows + R -> "powershell" -> ctrl + shift + enter` then enter:
+Install java +11.
+
+Open an admin shell with `windows + R -> "powershell" -> ctrl + shift + enter` then enter:
 
 ```powershell
 winget install ojdkbuild.openjdk.11.jdk
@@ -19,13 +21,7 @@ Install java +11.
 
 Install java +11.
 
-## Development
-
-Make Maven wrapper
-
-```sh
-mvn -N io.takari:maven:wrapper
-```
+## Fetch sources for dependencies
 
 Install source with java-doc.
 
@@ -33,7 +29,7 @@ Install source with java-doc.
 ./mvnw dependency:sources
 ```
 
-## Source
+## Fetch project source
 
 ### Without git
 
@@ -60,4 +56,12 @@ cd tp-antlr
 
 ```sh
 java -jar target/ai21-antlr-1.0-SNAPSHOT-jar-with-dependencies.jar
+```
+
+## Development
+
+Remake Maven wrapper
+
+```sh
+mvn -N io.takari:maven:wrapper
 ```
