@@ -28,7 +28,7 @@ cd tp-antlr
 <details>
   <summary>Windows</summary>
 
-### Windows : Install chocolatey and Java
+### Windows: Install chocolatey and Java
 
 Open an admin shell with `windows + R -> "powershell" -> ctrl + shift + enter` then enter:
 
@@ -37,19 +37,19 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco install openjdk
 ```
 
-### Windows : Retrieve sources for java-docs
+### Windows: Retrieve sources for java-docs
 
 ```sh
 ./mvnw.cmd dependency:sources
 ```
 
-### Windows : Compile and run
+### Windows: Compile and run
 
 ```powershell
 ./mvnw.cmd clean compile exec:java
 ```
 
-### Windows : Build standalone JAR
+### Windows: Build standalone JAR
 
 ```powershell
 ./mvnw.cmd clean package
@@ -60,31 +60,31 @@ choco install openjdk
 <details>
   <summary>Ubuntu</summary>
 
-## Ubuntu : Make Maven Wrapper executable
+## Ubuntu: Make Maven Wrapper executable
 
 ```sh
 chmod +x mvnw
 ```
 
-### Ubuntu : Update and Install Java
+### Ubuntu: Update and Install Java
 
 ```sh
 sudo apt -y update && sudo apt -y install default-jdk
 ```
 
-### Ubuntu : Retrieve sources for java-docs
+### Ubuntu: Retrieve sources for java-docs
 
 ```sh
 ./mvnw dependency:sources
 ```
 
-### Ubuntu : Compile and run
+### Ubuntu: Compile and run
 
 ```sh
 ./mvnw clean compile exec:java
 ```
 
-### Ubuntu : Build standalone JAR
+### Ubuntu: Build standalone JAR
 
 ```sh
 ./mvnw clean package
@@ -95,13 +95,13 @@ sudo apt -y update && sudo apt -y install default-jdk
 <details>
   <summary>Mac</summary>
 
-### Mac : Make Maven Wrapper executable
+### Mac: Make Maven Wrapper executable
 
 ```sh
 chmod +x mvnw
 ```
 
-### Mac : Install Homebrew and Java
+### Mac: Install Homebrew and Java
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -109,19 +109,19 @@ echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.bash_profile && source ~/.bash_
 brew install java
 ```
 
-### Mac : Retrieve sources for java-docs
+### Mac: Retrieve sources for java-docs
 
 ```sh
 ./mvnw dependency:sources
 ```
 
-### Mac : Compile and run
+### Mac: Compile and run
 
 ```sh
 ./mvnw clean compile exec:java
 ```
 
-### Mac : Build standalone JAR
+### Mac: Build standalone JAR
 
 ```sh
 ./mvnw clean package
