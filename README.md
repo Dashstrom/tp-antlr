@@ -1,6 +1,6 @@
 # TP AntLR
 
-Basic project for UV AI21 practical of [UTC](https://www.utc.fr/) work using [Maven](https://maven.apache.org/), [AntLR](https://www.antlr.org/) and [JavaFX](https://openjfx.io/) (with [Visual Studio Code](https://code.visualstudio.com/)).
+Basic project for UV AI21 of [UTC](https://www.utc.fr/) using [Maven](https://maven.apache.org/), [AntLR](https://www.antlr.org/) and [JavaFX](https://openjfx.io/) (with [Visual Studio Code](https://code.visualstudio.com/)).
 
 Be careful: **1 clone 📦 = 1 star ✨**
 
