@@ -1,49 +1,33 @@
 # TP AntLR
 
-TP AntLR for AI21.
+Basic project to carry out UV AI21 practical of [UTC](https://www.utc.fr/) work using [Maven](https://maven.apache.org/), [AntLR](https://www.antlr.org/) and [JavaFX](https://openjfx.io/) (with [Visual Studio Code](https://code.visualstudio.com/)).
 
 Be careful: **1 clone 📦 = 1 star ✨**
 
-## Windows prerequisite
-
-### Install chocolatey (package manager)
+## Windows : Install chocolatey and Java
 
 Open an admin shell with `windows + R -> "powershell" -> ctrl + shift + enter` then enter:
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-```
-
-### Install Java
-
-```powershell
 choco install openjdk
 ```
 
-## Mac prerequisite
-
-### Install Homebrew (package manager)
+## Mac : Install Homebrew and Java
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.bash_profile && source ~/.bash_profile
-```
-
-### Install Java and Gtk
-
-```bash
 brew install java
 ```
 
-## Linux prerequisite
-
-### Install Update and install Java
+## Ubuntu : Update and Install Java
 
 ```sh
 sudo apt -y update && sudo apt -y install default-jdk
 ```
 
-## Fetch project source
+## Get project
 
 ### With git
 
@@ -56,15 +40,13 @@ cd tp-antlr
 
 [Download the ZIP](https://github.com/Dashstrom/tp-antlr/archive/refs/heads/main.zip)
 
-## Fetch sources for dependencies
-
-Install source with java-doc.
+## Retrieve sources for java-docs
 
 ```sh
 ./mvnw dependency:sources
 ```
 
-## Build standalone jar
+## Build standalone JAR
 
 ### Windows
 
@@ -72,14 +54,14 @@ Install source with java-doc.
 ./mvnw.cmd clean package
 ```
 
-### Mac and Linux
+### Linux (Mac, Ubuntu, ...)
 
 ```sh
 chmod +x mvnw
 .\mvnw clean package
 ```
 
-## Run program
+## Run standalone JAR
 
 ```sh
 java -jar target/ai21-antlr-1.0-jar-with-dependencies.jar
@@ -93,6 +75,18 @@ AVERTISSEMENT: Unsupported JavaFX configuration: classes were loaded from 'unnam
 ```
 
 ![GUI](sujets/gui.png)
+
+## Fast run on Windows
+
+```powershell
+./mvnw.cmd clean compile exec:java
+```
+
+## Fast run on Linux (Mac, Ubuntu, ...)
+
+```sh
+.\mvnw clean compile exec:java
+```
 
 ## Development
 
