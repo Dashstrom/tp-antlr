@@ -11,6 +11,14 @@ winget install ojdkbuild.openjdk.11.jdk
 setx JAVA_HOME "$(Split-Path (Split-Path (Get-command java).Path -Parent) -Parent)"
 ```
 
+## Mac prerequisite
+
+Install java +11.
+
+## Linux prerequisite
+
+Install java +11.
+
 ## Development
 
 Make Maven wrapper
@@ -24,8 +32,6 @@ Install source with java-doc.
 ```sh
 ./mvnw dependency:sources
 ```
-
-Install [Tiled](https://www.mapeditor.org/) for edit zones
 
 ## Source
 

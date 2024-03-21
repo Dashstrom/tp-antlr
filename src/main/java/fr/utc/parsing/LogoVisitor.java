@@ -1,7 +1,5 @@
-// Generated from Logo.g4 by ANTLR 4.3
+// Generated from Logo.g4 by ANTLR 4.13.1
 package fr.utc.parsing;
-
-import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -9,58 +7,47 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  * by {@link LogoParser}.
  *
  * @param <T> The return type of the visit operation. Use {@link Void} for
- *            operations with no return type.
+ * operations with no return type.
  */
 public interface LogoVisitor<T> extends ParseTreeVisitor<T> {
 	/**
-	 * Visit a parse tree produced by the {@code td}
-	 * labeled alternative in {@link LogoParser#instruction}.
-	 * 
+	 * Visit a parse tree produced by {@link LogoParser#programme}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTd(@NotNull LogoParser.TdContext ctx);
-
+	T visitProgramme(LogoParser.ProgrammeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link LogoParser#liste_instructions}.
-	 * 
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitListe_instructions(@NotNull LogoParser.Liste_instructionsContext ctx);
-
+	T visitListe_instructions(LogoParser.Liste_instructionsContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code av}
 	 * labeled alternative in {@link LogoParser#instruction}.
-	 * 
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAv(@NotNull LogoParser.AvContext ctx);
-
+	T visitAv(LogoParser.AvContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code parenthese}
-	 * labeled alternative in {@link LogoParser#expr}.
-	 * 
+	 * Visit a parse tree produced by the {@code td}
+	 * labeled alternative in {@link LogoParser#instruction}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitParenthese(@NotNull LogoParser.ParentheseContext ctx);
-
+	T visitTd(LogoParser.TdContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code float}
 	 * labeled alternative in {@link LogoParser#expr}.
-	 * 
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFloat(@NotNull LogoParser.FloatContext ctx);
-
+	T visitFloat(LogoParser.FloatContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link LogoParser#programme}.
-	 * 
+	 * Visit a parse tree produced by the {@code parenthese}
+	 * labeled alternative in {@link LogoParser#expr}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitProgramme(@NotNull LogoParser.ProgrammeContext ctx);
+	T visitParenthese(LogoParser.ParentheseContext ctx);
 }

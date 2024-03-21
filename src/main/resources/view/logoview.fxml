@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<SplitPane dividerPositions="0.90076726342711" orientation="VERTICAL" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.dashstrom.gui.LogoController">
+<SplitPane dividerPositions="0.90076726342711" orientation="VERTICAL" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.utc.gui.LogoController">
    <items>
       <SplitPane dividerPositions="0.2" prefHeight="1308.0" prefWidth="1100.0">
          <items>
@@ -68,12 +68,12 @@
                               <InnerShadow blurType="TWO_PASS_BOX" choke="0.01" />
                            </effect>
                         </Button>
-                        <Button fx:id="clrview" mnemonicParsing="false" onAction="#clearView" prefHeight="25.0" prefWidth="160.0" text="Efface Vue">
+                        <Button fx:id="clrView" mnemonicParsing="false" onAction="#clearView" prefHeight="25.0" prefWidth="160.0" text="Efface Vue">
                            <effect>
                               <InnerShadow />
                            </effect>
                         </Button>
-                        <Button fx:id="clrlog" mnemonicParsing="false" onAction="#clearLog" prefHeight="25.0" prefWidth="160.0" text="Efface Log">
+                        <Button fx:id="clrLog" mnemonicParsing="false" onAction="#clearLog" prefHeight="25.0" prefWidth="160.0" text="Efface Log">
                            <effect>
                               <InnerShadow />
                            </effect>
@@ -93,7 +93,7 @@
                   </VBox>
                </content>
             </TitledPane>
-            <TextArea fx:id="logarea" prefHeight="191.0" prefWidth="892.0" />
+            <TextArea fx:id="logArea" prefHeight="191.0" prefWidth="892.0" />
          </children>
       </HBox>
    </items>

@@ -22,5 +22,5 @@ bin/
 hs_err_pid*
 
 # Generated sources
-src/main/java/fr/dashstrom/parsing
+src/main/java/fr/utc/parsing
 src/main/resources/grammar/.antlr

@@ -1,6 +1,6 @@
 grammar Logo ; 
 
-@header {package fr.dashstrom.parsing;}
+@header {package fr.utc.parsing;}
 
 FLOAT : [0-9][0-9]*('.'[0-9]+)? ;
 WS : [ \t\r\n]+ -> skip ;
