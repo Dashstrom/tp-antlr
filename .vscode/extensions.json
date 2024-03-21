@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "vscjava.vscode-java-dependency",
+        "vscjava.vscode-maven",
+        "redhat.java",
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "vscjava.vscode-java-debug",
+        "mike-lischke.vscode-antlr4"
+    ],
+    "unwantedRecommendations": []
+  }

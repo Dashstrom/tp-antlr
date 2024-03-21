@@ -4,12 +4,11 @@
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "redhat.java"
     },
-    "cSpell.language": "en,fr",
     "ltex.language": "en",
+    "cSpell.language": "en,fr",
     "cSpell.words": [
         "antlr",
         "choco",
-        "dashstrom",
         "lelelele",
         "mvnw",
         "ojdkbuild",
@@ -21,5 +20,6 @@
         "src/main/java/fr/utc/parsing": false,
         "src/main/resources/grammar/.antlr/": true,
         "target/": true
-    }
+    },
+    "redhat.telemetry.enabled": false,
 }
