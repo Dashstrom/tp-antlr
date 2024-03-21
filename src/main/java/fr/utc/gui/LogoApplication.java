@@ -9,8 +9,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class LogoApplication extends Application {
-	String url = "file:icon/26411.png";
-
 	@Override
 	public void start(Stage stage) throws Exception {
 		FXMLLoader loader = new FXMLLoader();
@@ -20,7 +18,7 @@ public class LogoApplication extends Application {
 		stage.setTitle("Logo Application");
 		Scene scene = new Scene(root, 1200, 600);
 		stage.setScene(scene);
-		stage.getIcons().add(new Image(url));
+		stage.getIcons().add(new Image(ResourceUtils.getResourceString("/icon/26411.png")));
 		scene.getStylesheets().add(ResourceUtils.getResourceURL("/css/stylesheet.css").toExternalForm());
 
 		stage.show();

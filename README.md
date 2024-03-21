@@ -26,23 +26,7 @@ Install java +11.
 
 Install java +11.
 
-## Fetch sources for dependencies
-
-Install source with java-doc.
-
-```sh
-./mvnw dependency:sources
-```
-
 ## Fetch project source
-
-### Without git on Linux
-
-```sh
-curl -g https://codeload.github.com/Dashstrom/tp-antlr/zip/refs/heads/master --output tp-antlr.zip
-tar xf tp-antlr-archive.zip
-cd tp-antlr-main
-```
 
 ### With git
 
@@ -51,15 +35,27 @@ git clone https://github.com/Dashstrom/tp-antlr.git
 cd tp-antlr
 ```
 
+### Without git on Linux
+
+[Download the ZIP](https://github.com/Dashstrom/tp-antlr/archive/refs/heads/main.zip)
+
+## Fetch sources for dependencies
+
+Install source with java-doc.
+
+```sh
+./mvnw dependency:sources
+```
+
 ## Build standalone jar
 
-## Windows
+### Windows
 
 ```powershell
 ./mvnw.cmd clean package
 ```
 
-## Mac and Linux
+### Mac and Linux
 
 ```sh
 chmod +x mvnw
