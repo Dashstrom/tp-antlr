@@ -35,7 +35,7 @@ git clone https://github.com/Dashstrom/tp-antlr.git
 cd tp-antlr
 ```
 
-### Without git on Linux
+### Without git
 
 [Download the ZIP](https://github.com/Dashstrom/tp-antlr/archive/refs/heads/main.zip)
 
