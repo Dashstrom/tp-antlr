@@ -18,7 +18,7 @@
         "winget"
     ],
     "files.exclude": {
-        "src/main/java/fr/utc/parsing": true,
+        "src/main/java/fr/utc/parsing": false,
         "src/main/resources/grammar/.antlr/": true,
         "target/": true
     }
