@@ -16,7 +16,7 @@
         "winget"
     ],
     "files.exclude": {
-        "src/main/java/fr/dashstrom/parsing": true,
+        "src/main/java/fr/utc/parsing": true,
         "src/main/resources/grammar/.antlr/": true,
         "target/": true
     }
