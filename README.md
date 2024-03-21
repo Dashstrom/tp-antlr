@@ -95,7 +95,7 @@ sudo apt -y update && sudo apt -y install default-jdk
 <details>
   <summary>Mac</summary>
 
-## Mac : Make Maven Wrapper executable
+### Mac : Make Maven Wrapper executable
 
 ```sh
 chmod +x mvnw
