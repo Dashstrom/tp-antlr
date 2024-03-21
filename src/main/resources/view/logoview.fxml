@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.SwingNode?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.90076726342711" orientation="VERTICAL" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.dashstrom.gui.LogoController">
+   <items>
+      <SplitPane dividerPositions="0.2" prefHeight="1308.0" prefWidth="1100.0">
+         <items>
+            <TitledPane text="Programme">
+               <content>
+                  <TextArea fx:id="program" maxHeight="600.0" maxWidth="250.0" prefHeight="600.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TabPane fx:id="resultPane" prefHeight="600.0" prefWidth="900.0" side="BOTTOM">
+               <tabs>
+                  <Tab closable="false" text="Arbre">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <center>
+                                    <SwingNode fx:id="swingNode" BorderPane.alignment="TOP_CENTER" />
+                                 </center>
+                                 <top>
+                                    <Slider fx:id="scaleSlider" max="1000.0" maxHeight="25.0" min="-999.0" prefHeight="25.0" prefWidth="900.0" BorderPane.alignment="CENTER" />
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab closable="false" text="Vue">
+                    <content>
+                      <AnchorPane fx:id="view" prefHeight="600.0" prefWidth="900.0">
+                           <children>
+                              <Canvas fx:id="canvas" height="518.0" width="508.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </items>
+      </SplitPane>
+      <HBox prefHeight="641.0" prefWidth="1100.0" spacing="10.0">
+         <children>
+            <TitledPane prefHeight="191.0" prefWidth="228.0" text="Contrôle">
+               <content>
+                  <VBox prefHeight="276.0" prefWidth="193.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="run" mnemonicParsing="false" onAction="#runParser" prefHeight="25.0" prefWidth="160.0" text="Exécute" textAlignment="CENTER">
+                           <effect>
+                              <InnerShadow blurType="TWO_PASS_BOX" choke="0.01" />
+                           </effect>
+                        </Button>
+                        <Button fx:id="clrview" mnemonicParsing="false" onAction="#clearView" prefHeight="25.0" prefWidth="160.0" text="Efface Vue">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="clrlog" mnemonicParsing="false" onAction="#clearLog" prefHeight="25.0" prefWidth="160.0" text="Efface Log">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="stop" mnemonicParsing="false" onAction="#stop" prefHeight="25.0" prefWidth="160.0" text="Stop-Run" textAlignment="CENTER">
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Button>
+                        <HBox prefHeight="29.0" prefWidth="173.0">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="97.0" text="Sleep (ms) : " />
+                              <TextField fx:id="sleep" alignment="CENTER_RIGHT" onAction="#setSleepTime" prefHeight="25.0" prefWidth="62.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TextArea fx:id="logarea" prefHeight="191.0" prefWidth="892.0" />
+         </children>
+      </HBox>
+   </items>
+</SplitPane>

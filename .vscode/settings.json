@@ -1,0 +1,23 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "[java]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "redhat.java"
+    },
+    "cSpell.language": "en,fr",
+    "ltex.language": "en",
+    "cSpell.words": [
+        "dashstrom",
+        "lelelele",
+        "mvnw",
+        "ojdkbuild",
+        "setx",
+        "takari",
+        "winget"
+    ],
+    "files.exclude": {
+        "src/main/java/fr/dashstrom/parsing": true,
+        "src/main/resources/grammar/.antlr/": true,
+        "target/": true
+    }
+}

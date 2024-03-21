@@ -1,0 +1,39 @@
+
+.root {
+  -fx-background: beige;
+}
+
+.button {
+    -fx-font: bold 11pt Arial;
+    -fx-text-fill: tomato;
+    -fx-border-color: darkcyan;
+    -fx-background-color: floralwhite;
+    -fx-border-width: 1pt;
+    -fx-border-radius: 4;
+    -fx-padding: 3 6 3 6;
+}
+.label {
+    -fx-background: beige;
+    -fx-font: bold 11pt "Arial";
+    -fx-text-fill: saddlebrown;
+}
+.hbox {
+-fx-background-color: floralwhite;
+}
+.titled-pane {
+    -fx-font: bold 11pt Arial;
+    -fx-text-fill: saddlebrown;
+    -fx-background-color: beige;
+}
+.tab-pane {
+    -fx-font: bold 10pt Arial;
+    -fx-text-fill: saddlebrown;
+}
+.text-area {
+      -fx-font: 11pt Arial;
+ }
+.text-area .content{
+      -fx-font: 16pt Arial;
+      -fx-background-color: beige;
+ }
+
