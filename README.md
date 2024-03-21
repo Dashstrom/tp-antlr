@@ -53,7 +53,16 @@ cd tp-antlr
 
 ## Build standalone jar
 
+## Windows
+
+```powershell
+./mvnw.cmd clean package
+```
+
+## Mac and Linux
+
 ```sh
+chmod +x mvnw
 .\mvnw clean package
 ```
 
@@ -65,7 +74,7 @@ java -jar target/ai21-antlr-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 ## Development
 
-Remake Maven wrapper
+Remake Maven wrapper (only if you know what you are doing).
 
 ```sh
 mvn -N io.takari:maven:wrapper
