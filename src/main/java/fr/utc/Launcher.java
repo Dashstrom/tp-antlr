@@ -1,6 +1,6 @@
-package fr.dashstrom;
+package fr.utc;
 
-import fr.dashstrom.gui.LogoApplication;
+import fr.utc.gui.LogoApplication;
 
 public class Launcher {
 

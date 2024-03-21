@@ -1,4 +1,4 @@
-package fr.dashstrom.model;
+package fr.utc.model;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 

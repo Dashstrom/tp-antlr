@@ -1,6 +1,6 @@
-package fr.dashstrom.gui;
+package fr.utc.gui;
 
-import fr.dashstrom.utils.ResourceUtils;
+import fr.utc.utils.ResourceUtils;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

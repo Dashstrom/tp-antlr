@@ -1,4 +1,4 @@
-package fr.dashstrom.utils;
+package fr.utc.utils;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

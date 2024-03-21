@@ -1,4 +1,4 @@
-package fr.dashstrom.model;
+package fr.utc.model;
 
 import java.util.Arrays;
 import java.util.List;
@@ -7,10 +7,10 @@ import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 
-import fr.dashstrom.gui.GraphLineParameter;
-import fr.dashstrom.parsing.LogoLexer;
-import fr.dashstrom.parsing.LogoParser;
-import fr.dashstrom.parsing.LogoParser.ProgrammeContext;
+import fr.utc.gui.GraphLineParameter;
+import fr.utc.parsing.LogoLexer;
+import fr.utc.parsing.LogoParser;
+import fr.utc.parsing.LogoParser.ProgrammeContext;
 import javafx.beans.value.ChangeListener;
 
 public class LogoGraphModel {

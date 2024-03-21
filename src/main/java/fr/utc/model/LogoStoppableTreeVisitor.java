@@ -1,8 +1,8 @@
-package fr.dashstrom.model;
+package fr.utc.model;
 
 import org.antlr.v4.runtime.tree.RuleNode;
 
-import fr.dashstrom.parsing.LogoBaseVisitor;
+import fr.utc.parsing.LogoBaseVisitor;
 
 public class LogoStoppableTreeVisitor extends LogoBaseVisitor<Integer> {
 	/**

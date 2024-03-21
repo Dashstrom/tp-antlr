@@ -1,4 +1,4 @@
-package fr.dashstrom.gui;
+package fr.utc.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -11,8 +11,8 @@ import javax.swing.SwingUtilities;
 
 import org.antlr.v4.gui.TreeViewer;
 
-import fr.dashstrom.model.LogoGraphModel;
-import fr.dashstrom.model.LogoTreeVisitor;
+import fr.utc.model.LogoGraphModel;
+import fr.utc.model.LogoTreeVisitor;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.embed.swing.SwingNode;

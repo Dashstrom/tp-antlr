@@ -1,4 +1,4 @@
-package fr.dashstrom.gui;
+package fr.utc.gui;
 
 import javafx.scene.paint.Color;
 

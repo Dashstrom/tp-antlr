@@ -1,17 +1,17 @@
-package fr.dashstrom.model;
+package fr.utc.model;
 
 import org.antlr.v4.runtime.misc.Pair;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeProperty;
 
-import fr.dashstrom.gui.Traceur;
-import fr.dashstrom.parsing.LogoParser.TdContext;
-import fr.dashstrom.parsing.LogoParser.AvContext;
-import fr.dashstrom.parsing.LogoParser.FloatContext;
+import fr.utc.gui.Traceur;
+import fr.utc.parsing.LogoParser.AvContext;
+import fr.utc.parsing.LogoParser.FloatContext;
+import fr.utc.parsing.LogoParser.TdContext;
 import javafx.beans.property.StringProperty;
 
 public class LogoTreeVisitor extends LogoStoppableTreeVisitor {
-	fr.dashstrom.gui.Traceur traceur;
+	fr.utc.gui.Traceur traceur;
 	Log log;
 
 	public LogoTreeVisitor() {
@@ -23,7 +23,7 @@ public class LogoTreeVisitor extends LogoStoppableTreeVisitor {
 		return log;
 	}
 
-	public fr.dashstrom.gui.Traceur getTraceur() {
+	public fr.utc.gui.Traceur getTraceur() {
 		return traceur;
 	}
 

@@ -1,4 +1,4 @@
-package fr.dashstrom.gui;
+package fr.utc.gui;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutorService;
