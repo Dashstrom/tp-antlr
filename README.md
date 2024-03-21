@@ -4,9 +4,9 @@ TP AntLR for AI21.
 
 ## Windows prerequisite
 
+Open an admin shell with  `windows + R -> "powershell" -> ctrl + shift + enter` then enter:
+
 ```powershell
-windows + R + "powershell"
-ctrl + shift + enter
 winget install ojdkbuild.openjdk.11.jdk
 setx JAVA_HOME "$(Split-Path (Split-Path (Get-command java).Path -Parent) -Parent)"
 ```
