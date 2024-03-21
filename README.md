@@ -101,7 +101,7 @@ sudo apt -y update && sudo apt -y install default-jdk
 chmod +x mvnw
 ```
 
-### Mac Install Homebrew and Java
+### Mac : Install Homebrew and Java
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
