@@ -72,6 +72,8 @@ chmod +x mvnw
 java -jar target/ai21-antlr-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
+![GUI](sujets/gui.png)
+
 ## Development
 
 Remake Maven wrapper (only if you know what you are doing).
