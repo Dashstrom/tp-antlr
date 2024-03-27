@@ -49,10 +49,16 @@ choco install openjdk
 ./mvnw.cmd clean compile exec:java
 ```
 
-### Windows: Build standalone JAR
+### Windows: Build standalone JAR and EXE
 
 ```powershell
 ./mvnw.cmd clean package
+```
+
+The following warning can occur. You can ignore it.
+
+```log
+[WARNING] Failed to build parent project for org.openjfx:javafx-...:jar:17
 ```
 
 </details>
@@ -60,7 +66,7 @@ choco install openjdk
 <details>
   <summary>Ubuntu</summary>
 
-## Ubuntu: Make Maven Wrapper executable
+### Ubuntu: Make Maven Wrapper executable
 
 ```bash
 chmod +x mvnw
@@ -84,10 +90,16 @@ sudo apt -y update && sudo apt -y install default-jdk
 ./mvnw clean compile exec:java
 ```
 
-### Ubuntu: Build standalone JAR
+### Ubuntu: Build standalone JAR and EXE
 
 ```bash
 ./mvnw clean package
+```
+
+The following warning can occur. You can ignore it.
+
+```log
+[WARNING] Failed to build parent project for org.openjfx:javafx-...:jar:17
 ```
 
 </details>
@@ -121,10 +133,16 @@ brew install java
 ./mvnw clean compile exec:java
 ```
 
-### Mac: Build standalone JAR
+### Mac: Build standalone JAR and EXE
 
 ```bash
 ./mvnw clean package
+```
+
+The following warning can occur. You can ignore it.
+
+```log
+[WARNING] Failed to build parent project for org.openjfx:javafx-...:jar:17
 ```
 
 </details>
@@ -137,7 +155,7 @@ java -jar target/ai21-antlr-1.0-jar-with-dependencies.jar
 
 The following warning can occur, and you can ignore it [see stackoverflow issue](https://stackoverflow.com/questions/67854139/javafx-warning-unsupported-javafx-configuration-classes-were-loaded-from-unna).
 
-```text
+```log
 ... com.sun.javafx.application.PlatformImpl startup
 AVERTISSEMENT: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @...'
 ```
@@ -149,5 +167,5 @@ AVERTISSEMENT: Unsupported JavaFX configuration: classes were loaded from 'unnam
 Regenerate [Maven wrapper](https://maven.apache.org/wrapper/maven-wrapper-plugin/) (only if you know what you are doing).
 
 ```bash
-mvn -N io.takari:maven:wrapper
+mvn wrapper:wrapper -Dtype=only-script
 ```

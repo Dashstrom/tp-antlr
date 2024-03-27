@@ -5,18 +5,33 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>fr.utc</groupId>
     <artifactId>ai21-antlr</artifactId>
-    <packaging>jar</packaging>
-    <version>1.0</version>
     <name>ai21-antlr</name>
+    <packaging>jar</packaging>
+    <version>1.0.0.0</version>
+    <inceptionYear>2024</inceptionYear>
     <url>https://github.com/Dashstrom/tp-antlr</url>
-
+    <description>Basic project for UV AI21 of UTC.</description>
+    <organization>
+        <name>UTC</name>
+        <url>https://www.utc.fr</url>
+    </organization>
 
     <properties>
+        <mainClass>fr.utc.Launcher</mainClass>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <java.version>11</java.version>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <javafx.version>17</javafx.version>
+        <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
+        <antlr4.version>4.13.1</antlr4.version>
+        <jupiter.version>5.10.2</jupiter.version>
+        <surefire.maven.plugin>3.2.5</surefire.maven.plugin>
+        <assembly.maven.plugin>3.7.1</assembly.maven.plugin>
+        <launch4j.maven.plugin>2.5.0</launch4j.maven.plugin>
+        <exec.maven.plugin>3.2.0</exec.maven.plugin>
+
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -24,110 +39,80 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.10.2</version>
+            <version>${jupiter.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.10.2</version>
+            <version>${jupiter.version}</version>
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.antlr/antlr4-runtime --><!--
-        https://mvnrepository.com/artifact/org.antlr/antlr4 -->
+        <!-- https://mvnrepository.com/artifact/org.antlr/antlr4 -->
         <dependency>
             <groupId>org.antlr</groupId>
             <artifactId>antlr4</artifactId>
-            <version>4.13.1</version>
+            <version>${antlr4.version}</version>
         </dependency>
-
 
         <!-- JavaFX Control -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>17</version>
+            <version>${javafx.version}</version>
         </dependency>
 
         <!-- JavaFX Media -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
-            <version>17</version>
-            <classifier>win</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-media</artifactId>
-            <version>17</version>
-            <classifier>mac</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-media</artifactId>
-            <version>17</version>
-            <classifier>linux</classifier>
+            <version>${javafx.version}</version>
         </dependency>
 
         <!-- JavaFX Swing -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-swing</artifactId>
-            <version>17</version>
+            <version>${javafx.version}</version>
         </dependency>
 
         <!-- JavaFX Graphics -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
-            <version>17</version>
-            <classifier>win</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-graphics</artifactId>
-            <version>17</version>
-            <classifier>mac</classifier>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-graphics</artifactId>
-            <version>17</version>
-            <classifier>linux</classifier>
+            <version>${javafx.version}</version>
         </dependency>
 
         <!-- JavaFX FXML -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>17</version>
+            <version>${javafx.version}</version>
         </dependency>
     </dependencies>
 
     <!-- Maven Build -->
     <build>
         <plugins>
+            <!-- Run test on compilation -->
+            <!-- https://maven.apache.org/surefire/maven-surefire-plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.2.5</version>
+                <version>${surefire.maven.plugin}</version>
             </plugin>
+
+            <!-- Build standalone jar -->
+            <!-- https://maven.apache.org/plugins/maven-assembly-plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.7.1</version>
-
-                <!-- For fat jar -->
+                <version>${assembly.maven.plugin}</version>
                 <configuration>
                     <archive>
                         <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>fr.utc.Launcher</mainClass>
+                            <mainClass>${mainClass}</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -143,25 +128,66 @@
                         </goals>
                     </execution>
                 </executions>
-
             </plugin>
 
-            <!-- Default -->
+            <!-- Create exe -->
+            <!-- https://github.com/orphan-oss/launch4j-maven-plugin/blob/master/src/main/resources/README.adoc -->
+            <!-- https://mvnrepository.com/artifact/com.akathist.maven.plugins.launch4j/launch4j-maven-plugin -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <groupId>com.akathist.maven.plugins.launch4j</groupId>
+                <artifactId>launch4j-maven-plugin</artifactId>
+                <version>${launch4j.maven.plugin}</version>
+                <executions>
+                    <execution>
+                        <id>l4j-gui</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>launch4j</goal>
+                        </goals>
+                        <configuration>
+                            <headerType>gui</headerType>
+                            <outfile>target/${project.artifactId}.exe</outfile>
+                            <jar>target/${project.artifactId}-${project.version}-jar-with-dependencies.jar</jar>
+                            <errTitle>${project.name}</errTitle>
+                            <classPath>
+                                <mainClass>${mainClass}</mainClass>
+                            </classPath>
+                            <jre>
+                                <minVersion>${java.version}</minVersion>
+                            </jre>
+                            <versionInfo>
+                                <fileVersion>${project.version}</fileVersion>
+                                <txtFileVersion>${project.version}</txtFileVersion>
+                                <fileDescription>${project.description}</fileDescription>
+                                <copyright>Copyright(C) ${project.inceptionYear} UTC, All rights reserved</copyright>
+                                <productVersion>${project.version}</productVersion>
+                                <txtProductVersion>${project.version}</txtProductVersion>
+                                <productName>${project.name}</productName>
+                                <internalName>${project.artifactId}</internalName>
+                                <originalFilename>${project.artifactId}.exe</originalFilename>
+                            </versionInfo>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Compile sources -->
+            <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-maven-plugin -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>${javafx.maven.plugin.version}</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <mainClass>${mainClass}</mainClass>
                 </configuration>
             </plugin>
 
+            <!-- Compile AntLR when building -->
             <!-- https://www.antlr.org/api/maven-plugin/latest/usage.html -->
             <plugin>
                 <groupId>org.antlr</groupId>
                 <artifactId>antlr4-maven-plugin</artifactId>
-                <version>4.13.1</version>
+                <version>${antlr4.version}</version>
                 <configuration>
                     <visitor>true</visitor>
                     <sourceDirectory>${basedir}/src/main/resources/grammar</sourceDirectory>
@@ -177,12 +203,12 @@
                 </executions>
             </plugin>
 
-
-            <!-- Define main class-->
+            <!-- Run fast with exec:java -->
+            <!-- https://www.mojohaus.org/exec-maven-plugin/ -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>${exec.maven.plugin}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -191,7 +217,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>fr.utc.Launcher</mainClass>
+                    <mainClass>${mainClass}</mainClass>
                 </configuration>
             </plugin>
         </plugins>

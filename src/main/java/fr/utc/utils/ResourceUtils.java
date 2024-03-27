@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -31,18 +32,11 @@ public class ResourceUtils {
     }
 
     public static URL getResourceURL(String file) {
-        URL url = ResourceUtils.class.getResource(file);
-        if (url == null) {
-            throw new IllegalArgumentException("Can't find file " + file);
-        }
-        return url;
+        return Objects.requireNonNull(ResourceUtils.class.getResource(file));
     }
 
     public static InputStream getResourceAsStream(String file) {
-        InputStream in = ResourceUtils.class.getResourceAsStream(file);
-        if (in == null)
-            throw new IllegalArgumentException("Invalid path " + file);
-        return in;
+        return Objects.requireNonNull(ResourceUtils.class.getResourceAsStream(file));
     }
 
     public static URI getResourceURI(String file) {
