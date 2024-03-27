@@ -167,5 +167,5 @@ AVERTISSEMENT: Unsupported JavaFX configuration: classes were loaded from 'unnam
 Regenerate [Maven wrapper](https://maven.apache.org/wrapper/maven-wrapper-plugin/) (only if you know what you are doing).
 
 ```bash
-mvn wrapper:wrapper -Dtype=only-script
+mvn wrapper:wrapper -Dtype=script
 ```
