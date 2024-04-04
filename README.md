@@ -30,7 +30,31 @@ cd tp-antlr
 
 ### Windows: Install chocolatey and Java
 
-Open an admin shell with `windows + R -> "powershell" -> ctrl + shift + enter` then enter:
+⚠️ Open an admin shell with `windows + R -> "powershell" -> ctrl + shift + enter`.
+
+Check if java is not already installed wih:
+
+```powershell
+java -version
+```
+
+This will display your java version, which must be at least 11. If this is not the case, uninstall java before continuing.
+
+Output example of a java version lower than 11:
+
+```text
+java version "1.8.0_291"
+Java(TM) SE Runtime Environment (build 1.8.0_291-b10)
+Java HotSpot(TM) 64-Bit Server VM (build 25.291-b10, mixed mode)
+```
+
+Output example if java is not installed:
+
+```text
+'java' is not recognized as an internal or external command, operable program or batch file.
+```
+
+After checking that your computer does not have java enter:
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
@@ -38,6 +62,8 @@ choco install openjdk
 ```
 
 ### Windows: Retrieve sources for java-docs
+
+⚠️ Re-open a shell in your project folder.
 
 ```powershell
 ./mvnw.cmd dependency:sources
@@ -67,6 +93,8 @@ The following warning can occur. You can ignore it.
   <summary>Ubuntu</summary>
 
 ### Ubuntu: Make Maven Wrapper executable
+
+⚠️ Open a shell in your project folder.
 
 ```bash
 chmod +x mvnw
@@ -108,6 +136,8 @@ The following warning can occur. You can ignore it.
   <summary>Mac</summary>
 
 ### Mac: Make Maven Wrapper executable
+
+⚠️ Open a shell in your project folder.
 
 ```bash
 chmod +x mvnw
