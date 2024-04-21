@@ -11,7 +11,7 @@ public class GraphLineParameter {
 
 	public GraphLineParameter(double initX, double initY, double endX, double endY, Color color) {
 		this.initX = initX;
-		this.initX = initX;
+		this.initY = initY;
 		this.endX = endX;
 		this.endY = endY;
 		this.color = color;

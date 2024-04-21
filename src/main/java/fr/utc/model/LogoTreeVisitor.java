@@ -52,6 +52,8 @@ public class LogoTreeVisitor extends LogoStoppableTreeVisitor {
 		Pair<Integer, Double> bilan = evaluate(ctx.expr());
 		if (bilan.a == 0) {
 			traceur.td(bilan.b);
+			log.defaultLog(ctx);
+			log.appendLog("Tourne de", String.valueOf(bilan.b));
 		}
 		return 0;
 	}
