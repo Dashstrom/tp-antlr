@@ -20,8 +20,8 @@
         <mainClass>fr.utc.Launcher</mainClass>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
-        <java.version>11</java.version>
-        <javafx.version>17</javafx.version>
+        <java.version>22</java.version>
+        <javafx.version>22-ea+11</javafx.version>
         <javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
         <antlr4.version>4.13.1</antlr4.version>
         <jupiter.version>5.10.2</jupiter.version>
